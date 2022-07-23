@@ -1,0 +1,174 @@
+:root {
+    --font-color-first-title: #4E5150;
+    --font-color-info: #A9A9A9;
+    --font-color-footer: #B9BDCF;
+    --font-family-primary: "Montserrat";
+    --bg-color: #fff;
+    --bg-color-cards: #E5E5E5;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-family: var(--font-family-primary), Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: var(--font-color-first-title);
+}
+
+.root-container {
+    display: flex;
+    flex-direction: column;
+    gap: min(12vw, 8.25rem);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem .75rem 0;
+    align-items: center;
+    gap: min(12.5vw, 4rem);
+}
+
+.main-container span {
+    display: block;
+    text-align: center;
+}
+
+.main-container .user {
+    display: flex;
+    flex-direction: column;
+    gap: min(4vw, 1.5rem);
+    width: min(80%, 21.75rem);
+}
+
+.main-container .user .cards {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.user .header .imgP-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
+}
+
+.user .header .imgP-container img {
+    width: 102;
+    height: auto;
+    display: block;
+    border-radius: 1rem;
+}
+
+.user .header .imgP-container .info-img {
+    display: flex;
+    flex-direction: column;
+    gap: min(1vw, .5rem);
+    align-items: center;
+}
+
+.user .header .imgP-container .info-img h1 {
+    font-weight: 600;
+    font-size: clamp(.875rem, 2.5vw, 1.5rem);
+    line-height: 1rem;
+}
+
+.user .header .imgP-container .info-img span {
+    font-weight: 600;
+    font-size: clamp(.625rem, 2vw, .875rem);
+    line-height: .75rem;
+    color: var(--font-color-info);
+}
+
+.user .cards .information-item {
+    background-color: var(--bg-color-cards);
+    padding: .5rem .25rem;
+    border-radius: .75rem;
+    width: 100%;
+}
+
+.user .cards .information-item .number {
+    font-weight: 600;
+    font-size: clamp(.75rem, 2vw, 1.125rem);
+}
+
+.user .cards .information-item .text {
+    font-weight: 600;
+    font-size: clamp(.75rem, 2vw, .875rem);
+    color: var(--font-color-info);
+}
+
+
+.main-container .gallery {
+    width: min(100%, 60rem);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: min(4vw, 2rem);
+    grid-template-areas:
+        "img-1 img-2 img-2"
+        "img-3 img-3 img-4"
+        "img-5 img-6 img-4"
+    ;
+}
+
+.main-container .gallery .img-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: .75rem;
+    display: block;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.15));
+}
+
+
+.main-container .gallery .img-1 {
+    grid-area: img-1;
+}
+
+.main-container .gallery .img-2 {
+    grid-area: img-2;
+}
+
+.main-container .gallery .img-3 {
+    grid-area: img-3;
+}
+
+.main-container .gallery .img-4 {
+    grid-area: img-4;
+}
+
+.main-container .gallery .img-5 {
+    grid-area: img-5;
+}
+
+.main-container .gallery .img-6 {
+    grid-area: img-6;
+}
+
+.footer p {
+    padding-bottom: 1.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    text-align: center;
+    color: var(--font-color-footer);
+}
+
+@media screen and (min-width: 48rem) {
+
+    .main-container {
+        padding: 3.75rem .75rem 0;
+    }
+
+    .user .header .imgP-container img {
+        width: 9.75rem;
+        height: auto;
+    }
+}
